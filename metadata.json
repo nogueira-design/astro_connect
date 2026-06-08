@@ -1,0 +1,6 @@
+{
+  "name": "AstroConnect",
+  "description": "Space-themed social network connecting astronauts in orbit with communities on Earth, promoting planetary awareness and Sustainable Development Goals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
