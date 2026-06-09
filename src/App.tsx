@@ -301,7 +301,7 @@ export default function App() {
       <div className="flex h-screen pt-16">
         
         {/* Left Sidebar (Desktop Only) with Telemetry Status Dashboard */}
-        <aside className="hidden lg:flex fixed left-0 top-16 h-[calc(100vh-64px)] w-[280px] bg-[#12121a]/90 backdrop-blur-md border-r border-white/10 flex-col p-6 select-none z-30 overflow-y-auto">
+        <aside className="hidden lg:flex fixed left-0 top-16 h-[calc(100vh-104px)] w-[280px] bg-[#12121a]/90 backdrop-blur-md border-r border-white/10 flex-col p-6 select-none z-30 overflow-y-auto">
           <div className="space-y-8 flex-1">
             
             {/* Current Orbit Parameters Section */}
@@ -688,16 +688,6 @@ export default function App() {
           </div>
         </main>
       </div>
-
-      {/* Floating Action Button (FAB) for post creation */}
-      <button 
-        onClick={() => setIsNewPostOpen(true)}
-        className="fixed bottom-20 lg:bottom-8 right-8 h-14 w-14 bg-[#00f2ff] hover:bg-[#00dbe7] text-[#00363a] rounded-full shadow-[0_0_15px_rgba(0,242,255,0.4)] flex items-center justify-center transition-all hover:scale-110 active:scale-90 active-glow z-40 cursor-pointer"
-        title="Broadcast new log update"
-        aria-label="Broadcast new log"
-      >
-        <span className="material-symbols-outlined text-2xl font-bold">edit_note</span>
-      </button>
 
       {/* Mobile/Tablet Pivot Navigation Bar */}
       <nav className="lg:hidden fixed bottom-0 w-full h-16 bg-[#0a0a0f]/95 backdrop-blur-xl border-t border-white/10 flex items-center justify-around px-4 z-40" role="tablist" aria-label="Mobile Navigation Drawer">
