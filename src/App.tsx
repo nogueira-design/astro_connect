@@ -147,29 +147,72 @@ export default function App() {
       {/* Top Navigation Bar in Immersive UI Theme */}
       <header className="fixed top-0 w-full z-40 bg-[#0a0a0f]/85 backdrop-blur-md border-b border-white/10 flex justify-between items-center px-4 lg:px-6 h-16 shrink-0">
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2 sm:gap-3 select-none">
-            <svg viewBox="0 0 100 100" className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Dashed circular boundary */}
-              <circle cx="50" cy="50" r="44" stroke="#00f2ff" strokeWidth="3.5" strokeDasharray="4 6" className="opacity-70" />
+          {/* ========================================== */}
+          {/*    ASTROCONNECT OFFICIAL BRAND LOGO        */}
+          {/* ========================================== */}
+          <div id="astroconnect-brand-logo" className="flex items-center gap-3 select-none">
+            {/* Logo Icon Visual Symbol (Planet with Saturn-like Ring & Moons) */}
+            <svg viewBox="0 0 100 100" className="w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0 text-white" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Orbital Moons / Coordinate dots around the main planet */}
+              <circle cx="18" cy="18" r="3.2" fill="white" className="opacity-90" />
+              <circle cx="83" cy="24" r="3.2" fill="white" className="opacity-90" />
+              <circle cx="15" cy="80" r="3.2" fill="white" className="opacity-90" />
+              <circle cx="84" cy="74" r="3.2" fill="white" className="opacity-90" />
               
-              {/* Bright Cyan sphere */}
-              <circle cx="43" cy="55" r="14" fill="#00f2ff" />
-              
-              {/* Smooth cobalt orbital sweep path */}
-              <path 
-                d="M 22 65 C 28 35, 48 35, 58 53 C 68 71, 78 65, 85 58" 
-                stroke="#3771fa" 
-                strokeWidth="7" 
-                strokeLinecap="round" 
-              />
-              
-              {/* Core orbit status coordinate point */}
-              <circle cx="68" cy="38" r="6.5" fill="#3b82f6" />
+              {/* Main rotated system */}
+              <g transform="translate(50, 50) rotate(-18)">
+                {/* 1. Back Ring half (top half of the ellipse going upwards) */}
+                <path 
+                  d="M 42,0 A 42,13 0 0,1 -42,0" 
+                  stroke="white" 
+                  strokeWidth="4.5" 
+                  strokeLinecap="round"
+                  fill="none" 
+                />
+                
+                {/* 2. Planet Solid body background mask (to hide back portion of the ring) */}
+                <circle cx="0" cy="0" r="23" fill="#0a0a0f" />
+                
+                {/* 3. Planet outline */}
+                <circle 
+                  cx="0" cy="0" 
+                  r="23" 
+                  stroke="white" 
+                  strokeWidth="4.5" 
+                  fill="none" 
+                />
+                
+                {/* 4. Front Ring half thick backup stroke (background colored to erase the planet's border overlap) */}
+                <path 
+                  d="M -42,0 A 42,13 0 0,1 42,0" 
+                  stroke="#0a0a0f" 
+                  strokeWidth="11" 
+                  strokeLinecap="round"
+                  fill="none" 
+                />
+                
+                {/* 5. Front Ring half actual stroke (bottom half of ellipse crossing in front of the planet) */}
+                <path 
+                  d="M -42,0 A 42,13 0 0,1 42,0" 
+                  stroke="white" 
+                  strokeWidth="4.5" 
+                  strokeLinecap="round"
+                  fill="none" 
+                />
+              </g>
             </svg>
-            <span className="text-lg sm:text-[22px] font-normal tracking-tight text-[#dff9fc] font-sans">
-              Astro<span className="font-semibold text-white">Connect</span>
-            </span>
+            
+            {/* Logo Text / Wordmark typography */}
+            <div className="flex flex-col leading-none">
+              <span className="text-[17px] sm:text-[19px] font-black tracking-[0.14em] text-white uppercase font-sans">
+                Astro
+              </span>
+              <span className="text-[11px] sm:text-[12px] font-medium tracking-[0.1em] text-[#00f2ff] uppercase font-sans mt-0.5">
+                Connect
+              </span>
+            </div>
           </div>
+          {/* ========================================== */}
           
           {/* Desktop Tab Navigation formatted uppercase tracking-widest */}
           <nav className="hidden lg:flex items-center gap-8 text-[12px] font-bold font-mono uppercase tracking-widest text-[#b9cacb]" role="tablist" aria-label="Main Navigation Panels">
