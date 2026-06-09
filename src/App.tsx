@@ -13,6 +13,7 @@ import { MapComponent } from './components/MapComponent';
 import { PostComponent } from './components/PostComponent';
 import { NewPostForm } from './components/NewPostForm';
 import { AstronautProfileGallery } from './components/AstronautProfileGallery';
+import Logo from './assets/Logo.svg';
 
 export default function App() {
   // Navigation tabs state
@@ -150,67 +151,8 @@ export default function App() {
           {/* ========================================== */}
           {/*    ASTROCONNECT OFFICIAL BRAND LOGO        */}
           {/* ========================================== */}
-          <div id="astroconnect-brand-logo" className="flex items-center gap-3 select-none">
-            {/* Logo Icon Visual Symbol (Planet with Saturn-like Ring & Moons) */}
-            <svg viewBox="0 0 100 100" className="w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0 text-white" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Orbital Moons / Coordinate dots around the main planet */}
-              <circle cx="18" cy="18" r="3.2" fill="white" className="opacity-90" />
-              <circle cx="83" cy="24" r="3.2" fill="white" className="opacity-90" />
-              <circle cx="15" cy="80" r="3.2" fill="white" className="opacity-90" />
-              <circle cx="84" cy="74" r="3.2" fill="white" className="opacity-90" />
-              
-              {/* Main rotated system */}
-              <g transform="translate(50, 50) rotate(-18)">
-                {/* 1. Back Ring half (top half of the ellipse going upwards) */}
-                <path 
-                  d="M 42,0 A 42,13 0 0,1 -42,0" 
-                  stroke="white" 
-                  strokeWidth="4.5" 
-                  strokeLinecap="round"
-                  fill="none" 
-                />
-                
-                {/* 2. Planet Solid body background mask (to hide back portion of the ring) */}
-                <circle cx="0" cy="0" r="23" fill="#0a0a0f" />
-                
-                {/* 3. Planet outline */}
-                <circle 
-                  cx="0" cy="0" 
-                  r="23" 
-                  stroke="white" 
-                  strokeWidth="4.5" 
-                  fill="none" 
-                />
-                
-                {/* 4. Front Ring half thick backup stroke (background colored to erase the planet's border overlap) */}
-                <path 
-                  d="M -42,0 A 42,13 0 0,1 42,0" 
-                  stroke="#0a0a0f" 
-                  strokeWidth="11" 
-                  strokeLinecap="round"
-                  fill="none" 
-                />
-                
-                {/* 5. Front Ring half actual stroke (bottom half of ellipse crossing in front of the planet) */}
-                <path 
-                  d="M -42,0 A 42,13 0 0,1 42,0" 
-                  stroke="white" 
-                  strokeWidth="4.5" 
-                  strokeLinecap="round"
-                  fill="none" 
-                />
-              </g>
-            </svg>
-            
-            {/* Logo Text / Wordmark typography */}
-            <div className="flex flex-col leading-none">
-              <span className="text-[17px] sm:text-[19px] font-black tracking-[0.14em] text-white uppercase font-sans">
-                Astro
-              </span>
-              <span className="text-[11px] sm:text-[12px] font-medium tracking-[0.1em] text-[#00f2ff] uppercase font-sans mt-0.5">
-                Connect
-              </span>
-            </div>
+          <div id="astroconnect-brand-logo" className="flex items-center select-none">
+            <img src={Logo} alt="AstroConnect Logo" className="h-8 sm:h-10 w-auto object-contain" />
           </div>
           {/* ========================================== */}
           
